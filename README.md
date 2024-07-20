@@ -15,8 +15,6 @@ particularly `thread_count`, which tracks the number of active threads. The `con
 function manages the lifecycle of each connection:
 • Reads the incoming HTTP request using `read()`.
 • Parses the request type (`GET`, `POST`) and requested file.
-• Handles `multipart/form-data` requests separately by parsing and saving uploaded files to a
-specified directory (`./public/downloads/`).
 • Manages normal `GET` and `POST` requests by sending appropriate HTTP headers and file
 contents back to the client using `send_message()`.
 4. File Sending: The `send_message()` function constructs HTTP headers and sends files back to
